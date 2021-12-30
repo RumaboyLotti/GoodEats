@@ -11,7 +11,7 @@ public class BookCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p = (Player) sender;
-        Material item = Material.BOOK;
+        Material item = Material.WRITTEN_BOOK;
         if(sender instanceof Player){
             p.getInventory().addItem(new ItemStack(item));
         }else {

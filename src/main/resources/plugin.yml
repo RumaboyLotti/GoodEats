@@ -1,13 +1,13 @@
 name: GoodEats
 version: '${project.version}'
-main: org.limedits.godeats.GodEats
+main: org.limedits.goodeats.GoodEats
 api-version: 1.18
 authors: [ RumaboyLotti ]
 description: Eating makes you stronger
 commands:
     EatMore:
       description: A book on possible potion effects and Items
-      usage: /<commdan>
+      usage: /<command>
       aliases:
         - eatmore
         - Eatmore

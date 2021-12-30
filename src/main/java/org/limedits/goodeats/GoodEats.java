@@ -3,7 +3,7 @@ package org.limedits.goodeats;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.limedits.goodeats.EatMoreCommands.BookCommand;
 
-public final class GodEats extends JavaPlugin {
+public final class GoodEats extends JavaPlugin {
 
     @Override
     public void onEnable() {

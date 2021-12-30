@@ -20,6 +20,12 @@ public class BookCommand implements CommandExecutor {
         BookMeta bookMeta  = (BookMeta) book.getItemMeta();
         bookMeta.setAuthor("Ava");
         bookMeta.setDisplayName("Eat More Guide");
+        bookMeta.isUnbreakable();
+        try {
+            book.wait(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         bookMeta.setLore(Collections.singletonList(ChatColor.LIGHT_PURPLE + "Eat More guide for the less Intelligent"));
         bookMeta.getLore();
         book.setItemMeta(bookMeta);

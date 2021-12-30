@@ -1,0 +1,6 @@
+name: GoodEats
+version: '${project.version}'
+main: org.limedits.godeats.GodEats
+api-version: 1.18
+authors: [ RumaboyLotti ]
+description: Eating makes you stronger

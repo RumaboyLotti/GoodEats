@@ -4,3 +4,12 @@ main: org.limedits.godeats.GodEats
 api-version: 1.18
 authors: [ RumaboyLotti ]
 description: Eating makes you stronger
+commands:
+    EatMore:
+      description: A book on possible potion effects and Items
+      usage: /<commdan>
+      aliases:
+        - eatmore
+        - Eatmore
+        - eatMore
+

@@ -1,7 +1,7 @@
-package org.limedits.godeats;
+package org.limedits.goodeats;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.limedits.godeats.EatMoreCommands.BookCommand;
+import org.limedits.goodeats.EatMoreCommands.BookCommand;
 
 public final class GodEats extends JavaPlugin {
 

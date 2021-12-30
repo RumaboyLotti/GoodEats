@@ -1,4 +1,4 @@
-package org.limedits.godeats.EatMoreCommands;
+package org.limedits.goodeats.EatMoreCommands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

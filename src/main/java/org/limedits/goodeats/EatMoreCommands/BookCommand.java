@@ -9,7 +9,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class BookCommand implements CommandExecutor {
 
@@ -18,11 +20,35 @@ public class BookCommand implements CommandExecutor {
         Player p = (Player) sender;
         ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
         BookMeta bookMeta  = (BookMeta) book.getItemMeta();
+        ArrayList<String> pages = new ArrayList<String>();
+        pages.add("Welcome to Eat More");
+        pages.add("Brief overview of what each food item does");
+        pages.add("Do /help GoodEats for list of commands");
+        pages.add("Cooked Beef gives health boost");
+        pages.add("Cooked chicken gives Luck");
+        pages.add("Cooked Cod gives absorption hearts ");
+        pages.add("Cooked Sheep gives Saturation");
+        pages.add("Cooked Porkchop gives damage resistance ");
+        pages.add("Cooked Rabbit give slowfalling ");
+        pages.add("Cooked Salmon give insta health ");
+        pages.add("Baked Potato  gives conduit power");
+        pages.add("Beat Soup gives Levitation");
+        pages.add("Bread gives jump boost");
+        pages.add("Dried Kelp gives Strength");
+        pages.add("Mushroom Stew gives haste");
+        pages.add("Rabbit Stew gives night vision");
+        pages.add("Cookie gives Speed");
+        pages.add(ChatColor.DARK_GREEN + "That's all Folks!");
+
         bookMeta.setAuthor("Ava");
+        bookMeta.setTitle("Eatmore");
         bookMeta.setDisplayName(ChatColor.DARK_RED +  "Eat More Guide");
         bookMeta.isUnbreakable();
         bookMeta.setLore(Collections.singletonList(ChatColor.LIGHT_PURPLE + "Eat More guide for the less Intelligent"));
         bookMeta.getLore();
+        bookMeta.getPages();
+
+        bookMeta.setPages(pages);
         book.setItemMeta(bookMeta);
         if(sender instanceof Player){
             p.getInventory().addItem(new ItemStack(book));

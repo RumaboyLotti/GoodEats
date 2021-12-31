@@ -13,8 +13,6 @@ import java.util.Collections;
 
 public class BookCommand implements CommandExecutor {
 
-
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p = (Player) sender;

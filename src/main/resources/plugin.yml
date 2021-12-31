@@ -5,6 +5,12 @@ api-version: 1.18
 authors: [ RumaboyLotti ]
 description: Eating makes you stronger
 commands:
+    Glow:
+      description: Toggle glow from eating healty
+      usage : /<command>
+      aliases:
+        - glow
+
     EatMore:
       description: A book on possible potion effects and Items
       usage: /<command>

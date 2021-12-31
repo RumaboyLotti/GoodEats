@@ -50,8 +50,7 @@ public class PlayerEatEvent implements Listener {
             }else if (p.getItemInUse ().isSimilar(salmon)){
                 p.addPotionEffect(siette); siette.hasIcon();  e.getPlayer().addPotionEffect(siette);
             }
-        // p.addPotionEffect(uno); p.addPotionEffect(dos);p.addPotionEffect(tres);
-        // p.addPotionEffect(quarto); p.addPotionEffect(cinco);p.addPotionEffect(sies);p.addPotionEffect(siette);
+
     }
 
       PotionEffect uno = new PotionEffect(PotionEffectType.HEALTH_BOOST, 200, 1 );
@@ -61,7 +60,5 @@ public class PlayerEatEvent implements Listener {
       PotionEffect cinco = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1 );
       PotionEffect sies = new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 1 );
       PotionEffect siette = new PotionEffect(PotionEffectType.HEAL, 200, 1 );
-
-
 
 }

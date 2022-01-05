@@ -9,11 +9,11 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
 import java.util.ArrayList;
 
 
-public class PlayerEatEvent implements Listener {
+
+public class PlayerEatEvent implements   Listener {
     @EventHandler
     public void onPlayerEat(PlayerItemConsumeEvent e){
       ItemStack beef = new ItemStack(Material.COOKED_BEEF);
@@ -53,12 +53,12 @@ public class PlayerEatEvent implements Listener {
 
     }
 
-      PotionEffect uno = new PotionEffect(PotionEffectType.HEALTH_BOOST, 200, 1 );
-      PotionEffect dos = new PotionEffect(PotionEffectType.LUCK, 200, 1 );
-      PotionEffect tres = new PotionEffect(PotionEffectType.ABSORPTION, 200, 2 );
-      PotionEffect quarto = new PotionEffect(PotionEffectType.SATURATION, 200, 1 );
-      PotionEffect cinco = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1 );
-      PotionEffect sies = new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 1 );
-      PotionEffect siette = new PotionEffect(PotionEffectType.HEAL, 200, 1 );
+    PotionEffect uno = new PotionEffect(PotionEffectType.HEALTH_BOOST, 200,1);
+    PotionEffect dos = new PotionEffect(PotionEffectType.LUCK, 200, 1);
+    PotionEffect tres = new PotionEffect(PotionEffectType.ABSORPTION, 200, 2);
+    PotionEffect quarto = new PotionEffect(PotionEffectType.SATURATION, 200, 1);
+    PotionEffect cinco = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 200, 1);
+    PotionEffect sies = new PotionEffect(PotionEffectType.SLOW_FALLING, 200, 1);
+    PotionEffect siette = new PotionEffect(PotionEffectType.HEAL, 200, 1);
 
 }

@@ -9,14 +9,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.BookMeta;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class BookCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        Map<String, Long> cooldown = new HashMap<String, Long>();
         Player p = (Player) sender;
         ItemStack book = new ItemStack(Material.WRITTEN_BOOK);
         BookMeta bookMeta  = (BookMeta) book.getItemMeta();
@@ -51,6 +50,16 @@ public class BookCommand implements CommandExecutor {
         bookMeta.setPages(pages);
         book.setItemMeta(bookMeta);
         if(sender instanceof Player){
+
+            if(cooldown.containsKey(p.getName())){
+                if(cooldown.get(p.getName()) > System.currentTimeMillis()){
+                    long timeleft = (cooldown.get(p.getName()) - System.currentTimeMillis()) /1000;
+                    p.sendMessage(ChatColor.GOLD + "Calm down Buck a roo" + timeleft + "Seconds");
+                    System.out.println();
+                }
+                return true;
+            }
+            cooldown.put(p.getName(), System.currentTimeMillis()+(9 * 1000) );
             p.getInventory().addItem(new ItemStack(book));
         }else {
             System.out.println("You must be a player to use this command");

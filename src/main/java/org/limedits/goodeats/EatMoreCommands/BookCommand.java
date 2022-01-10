@@ -53,8 +53,8 @@ public class BookCommand implements CommandExecutor {
             p.getInventory().addItem(new ItemStack(book));
             if(cooldown.containsKey(p.getName())){
                 if(cooldown.get(p.getName()) > System.currentTimeMillis()){
-                    long time-left = (cooldown.get(p.getName()) - System.currentTimeMillis()) /1000;
-                    p.sendMessage(ChatColor.GOLD + "Calm down Buck a roo" + time-left + "Seconds");
+                    long time_left = (cooldown.get(p.getName()) - System.currentTimeMillis()) /1000;
+                    p.sendMessage(ChatColor.GOLD + "Calm down Buck a roo" + time_left + "Seconds");
                     System.out.println();
                 }
                 return true;

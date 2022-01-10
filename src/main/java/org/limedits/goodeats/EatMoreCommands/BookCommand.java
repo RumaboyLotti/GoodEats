@@ -55,7 +55,6 @@ public class BookCommand implements CommandExecutor {
                 if(cooldown.get(p.getName()) > System.currentTimeMillis()){
                     long time_left = (cooldown.get(p.getName()) - System.currentTimeMillis()) /1000;
                     p.sendMessage(ChatColor.GOLD + "Calm down Buck a roo" + time_left + "Seconds");
-                    System.out.println();
                 }
                 return true;
             }
